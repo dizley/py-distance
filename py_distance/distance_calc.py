@@ -5,6 +5,7 @@ Created on Nov 6, 2014
 '''
 
 import py_distance.haversine as hav
+import py_distance.law_of_cosines as cos
 
 def distance_calc(point1, point2, calcType = 'haversine'):
     """
@@ -16,5 +17,7 @@ def distance_calc(point1, point2, calcType = 'haversine'):
     
     if(calcType == 'haversine'):
         return hav.calculate(point1, point2)
+    elif(calcType == 'cosine'):
+        return cos.calculate(point1, point2)
     else:
         pass

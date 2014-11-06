@@ -13,5 +13,6 @@ if __name__ == '__main__':
     print(point1)
     print(point2)
     
-    print(distance_calc.distance_calc(point1, point2, 'haversine'))
+    print('Haversine distance: ' + str(distance_calc.distance_calc(point1, point2, 'haversine')))
+    print('Spherical Law of Cosines distance: ' + str(distance_calc.distance_calc(point1, point2, 'cosine')))
     
