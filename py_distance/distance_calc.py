@@ -7,6 +7,7 @@ Created on Nov 6, 2014
 import py_distance.haversine as hav
 import py_distance.law_of_cosines as cos
 import py_distance.equirectangular as rec
+import py_distance.polar_flat as pol
 
 def distance_calc(point1, point2, calcType = 'haversine'):
     """
@@ -22,5 +23,7 @@ def distance_calc(point1, point2, calcType = 'haversine'):
         return cos.calculate(point1, point2)
     elif(calcType == 'equirect'):
         return rec.calculate(point1, point2)
+    elif(calcType == 'polarflat'):
+        return pol.calculate(point1, point2)
     else:
         pass

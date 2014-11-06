@@ -16,4 +16,5 @@ if __name__ == '__main__':
     print('Haversine distance: ' + str(distance_calc.distance_calc(point1, point2, 'haversine')))
     print('Spherical Law of Cosines distance: ' + str(distance_calc.distance_calc(point1, point2, 'cosine')))
     print('Equirectangular distance: ' + str(distance_calc.distance_calc(point1, point2, 'equirect')))
+    print('Polar co-ordinate flat-earth distance: ' + str(distance_calc.distance_calc(point1, point2, 'polarflat')))
     
