@@ -8,6 +8,7 @@ import py_distance.haversine as hav
 import py_distance.law_of_cosines as cos
 import py_distance.equirectangular as rec
 import py_distance.polar_flat as pol
+import py_distance.vincenty as vin
 
 def distance_calc(point1, point2, calcType = 'haversine'):
     """
@@ -17,10 +18,12 @@ def distance_calc(point1, point2, calcType = 'haversine'):
                                                                                     negative indicates South/West
     """
     
-    types = ['haversine', 'cosine', 'equirect', 'polarflat']
+    types = ['vincenty', 'haversine', 'cosine', 'equirect', 'polarflat']
     
     if calcType in types:
-        if(calcType == 'haversine'):
+        if(calcType == 'vincenty'):
+            return vin.calculate(point1, point2)
+        elif(calcType == 'haversine'):
             return hav.calculate(point1, point2)
         elif(calcType == 'cosine'):
             return cos.calculate(point1, point2)
