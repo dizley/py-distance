@@ -17,13 +17,16 @@ def distance_calc(point1, point2, calcType = 'haversine'):
                                                                                     negative indicates South/West
     """
     
-    if(calcType == 'haversine'):
-        return hav.calculate(point1, point2)
-    elif(calcType == 'cosine'):
-        return cos.calculate(point1, point2)
-    elif(calcType == 'equirect'):
-        return rec.calculate(point1, point2)
-    elif(calcType == 'polarflat'):
-        return pol.calculate(point1, point2)
+    types = ['haversine', 'cosine', 'equirect', 'polarflat']
+    
+    if calcType in types:
+        if(calcType == 'haversine'):
+            return hav.calculate(point1, point2)
+        elif(calcType == 'cosine'):
+            return cos.calculate(point1, point2)
+        elif(calcType == 'equirect'):
+            return rec.calculate(point1, point2)
+        elif(calcType == 'polarflat'):
+            return pol.calculate(point1, point2)
     else:
-        pass
+        return('No calculation type ' + calcType)
