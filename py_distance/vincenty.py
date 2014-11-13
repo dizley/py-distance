@@ -67,7 +67,7 @@ def calculate(point1, point2):
         if(abs(l - l_prime) < 1e-12 or iterationLimit == 0):
             break
         
-    print(str(100 - iterationLimit) + ' iterations required for vincenty')
+    #print(str(100 - iterationLimit) + ' iterations required for vincenty')
         
     u2 = cos2alpha*((a**2 - b**2)/b**2)
     A = 1 + (u2/16384)*(4096+u2*(-768+u2*(320-175*u2)))
